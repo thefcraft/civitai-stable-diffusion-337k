@@ -1,4 +1,9 @@
 # civitai-stable-diffusion-337k
+### huggingface🤗 url
+```
+https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k
+json download link = https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k/resolve/main/othertype/civitai.json
+```
 ### How to Use
 ```
 from datasets import load_dataset
@@ -12,6 +17,7 @@ print(dataset['train'][0])
 
 dataset:- civitai-stable-diffusion-337k this dataset contains 337k civitai images url with prompts etc. i use civitai api to get all prompts.
 project:- https://github.com/thefcraft/nsfw-prompt-detection-sd  I train a model on this dataset
+
 
 DATA STRUCTURE for othertype/civitai.json:-
 
