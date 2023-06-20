@@ -12,3 +12,4 @@ while True:
     items = data['items']
     # now do whatever you want with data
 
+    break # remove this line
