@@ -1,9 +1,8 @@
 # civitai-stable-diffusion-337k
 ### huggingface🤗 url
-```
-https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k
+dataset = https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k
+
 json download link = https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k/resolve/main/othertype/civitai.json
-```
 ### How to Use
 ```
 from datasets import load_dataset
