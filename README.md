@@ -24,20 +24,6 @@ The primary dataset is structured in JSON, huggingface format with a detailed br
 - User details for each image.
 
 A sample structure is provided below:
-```json
-{
-    'items': [
-      {
-       'id': 100657,
-       'url': 'https://imagecache.civitai.com/...',
-       ...
-       'username': 'NeoClassicalRibbon'
-      },
-      ...
-    ],
-    'metadata':{'totalItems': 327145}
-}
-```
 
 ```python
 {
