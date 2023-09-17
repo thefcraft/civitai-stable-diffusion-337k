@@ -1,27 +1,33 @@
-# civitai-stable-diffusion-337k
-### huggingface🤗 url
-dataset = https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k
+## Description:
 
-json download link = https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k/resolve/main/othertype/civitai.json
-### How to Use
-```
+### Overview:
+
+The Civitai Stable Diffusion 337k is a dataset containing 337k Civitai image URLs accompanied by detailed prompts and other meta-information. The dataset is primarily sourced using the Civitai API to obtain an exhaustive list of prompts associated with each image.
+
+[Explore the dataset on HuggingFace🤗](https://huggingface.co/datasets/thefcraft/civitai-stable-diffusion-337k)
+
+### Quick Usage:
+```python
 from datasets import load_dataset
 
 dataset = load_dataset("thefcraft/civitai-stable-diffusion-337k")
-
 print(dataset['train'][0])
 ```
 
-### Dataset Summary
+### Dataset Structure:
 
-dataset:- civitai-stable-diffusion-337k this dataset contains 337k civitai images url with prompts etc. i use civitai api to get all prompts.
-project:- https://github.com/thefcraft/nsfw-prompt-detection-sd  I train a model on this dataset
+The primary dataset is structured in JSON, huggingface format with a detailed breakdown of image attributes for each item. An individual item contains:
 
+- Image URL, Hash, Dimensions, NSFW flag, Creation date, and Post ID.
+- Statistical data like cry, laugh, like, dislike, heart counts, and comment count.
+- Metadata including model details, prompts, sampler info, and other configuration details.
+- User details for each image.
 
-DATA STRUCTURE for othertype/civitai.json:-
+A sample structure is provided below:
 
-```{
-'items':[
+```json
+{
+    'items':[
       {'id': 100657,
        'url': 'https://imagecache.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2338276a-87f7-4a1e-f92a-776a18ee4200/width=768/2338276a-87f7-4a1e-f92a-776a18ee4200.jpeg',
        'hash': 'U5Exz_00.8D$t89Z%M0100~VD*RktQxaIU~p',
@@ -60,3 +66,7 @@ DATA STRUCTURE for othertype/civitai.json:-
 'metadata':{'totalItems': 327145}
 }
 ```
+
+### Project and Training:
+
+An AI model was trained on this dataset for NSFW prompt detection. Details and code for the project can be found at [this GitHub repository](https://github.com/thefcraft/nsfw-prompt-detection-sd).
